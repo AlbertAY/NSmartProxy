@@ -63,8 +63,13 @@ namespace NSmartProxy
             if (args.Length == 4)
             {
                 _currentLoginInfo = new LoginInfo();
+
                 _currentLoginInfo.UserName = args[1];
+                Logger.Info($"UserName:{_currentLoginInfo.UserName}");
+
                 _currentLoginInfo.UserPwd = args[3];
+                Logger.Info($"UserPwdLength:{_currentLoginInfo.UserPwd.Length}");
+
             }
 
             Logger.Info($"*** {NSPVersion.NSmartProxyClientName} ***");
